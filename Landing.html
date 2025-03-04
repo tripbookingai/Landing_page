@@ -99,6 +99,37 @@
             font-weight: 600;
         }
         
+        /* Airplane animation styles */
+        .airplane-animation {
+            display: inline-block;
+            position: relative;
+            margin-left: 10px;
+            animation: fly-airplane 3s linear infinite;
+        }
+        
+        @keyframes fly-airplane {
+            0% {
+                transform: translateX(0) rotate(-20deg);
+            }
+            25% {
+                transform: translateX(50px) rotate(10deg);
+            }
+            50% {
+                transform: translateX(100px) rotate(-10deg);
+            }
+            75% {
+                transform: translateX(150px) rotate(10deg);
+            }
+            100% {
+                transform: translateX(200px) rotate(-20deg);
+            }
+        }
+        
+        .airplane-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
         .countdown {
             display: flex;
             justify-content: center;
@@ -381,7 +412,12 @@
                 <div class="badge">South Asia's First AI Travel Agent</div>
                 <h1>The Future of Travel Planning with <span>TripBooking.ai</span></h1>
                 <p class="tagline">AI-powered travel recommendations and seamless booking experiences</p>
-                <p class="sub-tagline">Launching in</p>
+                <p class="sub-tagline">
+                    Launching in 
+                    <span class="airplane-animation">
+                        <i class="fas fa-plane airplane-icon"></i>
+                    </span>
+                </p>
                 
                 <div class="countdown">
                     <div class="countdown-item">
